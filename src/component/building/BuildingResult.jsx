@@ -9,7 +9,7 @@ function BuildingResult({ building }) {
   }, []);
 
   const fetchBuilding = async () => {
-    const response = await fetch("{process.env.REACT_APP_BUILDING}");
+    const response = await fetch(process.env.REACT_APP_BUILDING);
 
     const data = await response.json();
     setbuildings(data);

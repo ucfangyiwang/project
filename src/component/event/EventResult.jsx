@@ -10,7 +10,7 @@ function EventResult({ year }) {
   }, []);
 
   const fetchEvent = async () => {
-    const response = await fetch(REACT_APP_EVENT);
+    const response = await fetch(process.env.REACT_APP_EVENT);
 
     const data = await response.json();
     setEvents(data);
