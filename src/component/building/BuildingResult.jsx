@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BuildingDetail from "./BuildingDetail";
 import PropTypes from "prop-types";
-function BuildingResult({ building }) {
+function BuildingResult() {
   const [buildings, setbuildings] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
