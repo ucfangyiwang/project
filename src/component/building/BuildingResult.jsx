@@ -5,13 +5,11 @@ function BuildingResult({ building }) {
   const [buildings, setbuildings] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetchEvent();
+    fetchBuilding();
   }, []);
 
-  const fetchEvent = async () => {
-    const response = await fetch(
-      "http://cm.beneb.com/wp-json/wp/v2/buildings/?per_page=50"
-    );
+  const fetchBuilding = async () => {
+    const response = await fetch("{process.env.REACT_APP_BUILDING}");
 
     const data = await response.json();
     setbuildings(data);

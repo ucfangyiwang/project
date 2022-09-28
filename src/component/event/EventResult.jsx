@@ -10,9 +10,7 @@ function EventResult({ year }) {
   }, []);
 
   const fetchEvent = async () => {
-    const response = await fetch(
-      "http://cm.beneb.com/wp-json/wp/v2/events/?per_page=50"
-    );
+    const response = await fetch(REACT_APP_EVENT);
 
     const data = await response.json();
     setEvents(data);
